@@ -28,4 +28,11 @@ document = Tilt(
     _hash=sha256('rest_of_the_document'.encode('utf-8')).hexdigest())
 
 print(document.name)
+
+# Playin' around...
+Tilt = {}
+for p in tilt_schema_dict['properties'].keys():
+    Tilt[p] = warlock.model_factory(tilt_schema_dict['properties'][p])
+
+
 ```
